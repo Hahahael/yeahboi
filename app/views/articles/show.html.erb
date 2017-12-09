@@ -1,6 +1,13 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
 
+<p>
+	Tags:
+	<% @article.tags.each do |tag| %>
+		<%= link_to tag.name, tag_path(tag) %>
+	<% end %>
+</p>
+
 <h3>Comments (<%= @article.comments.size %>)</h3>
 <%= render partial: 'articles/comment', collection: @article.comments.reverse %>
 
@@ -8,12 +15,12 @@
 
 <li>
 	<%= link_to "Back to Posts", articles_path %>
-</li>
+</li></br>
 
 <li>
 	<%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Delete this article?"} %>
-</li>
+</li></br>
 
 <li>
 	<%= link_to "Edit", edit_article_path(@article)%>
-</li>
+</li></br>

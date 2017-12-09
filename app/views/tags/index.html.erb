@@ -1,0 +1,11 @@
+<h1>List of all available tags:</h1>
+<ul id ="tags">
+	<% @tags.each do |tag| %>
+		<li>
+			<%= link_to "#{tag.name}", tag_path(tag), class: 'tag_name' %>
+			<%= link_to "Remove Tag", tag_path(tag), method: :delete, data: {confirm: "Delete this tag?"} %>
+		</li></br>
+	<% end %>
+</ul>
+
+<%= link_to "Back to Posts", articles_path %>
