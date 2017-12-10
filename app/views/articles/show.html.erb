@@ -22,10 +22,12 @@
 	<%= link_to "Back to Posts", articles_path %>
 </li></br>
 
-<li>
-	<%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Delete this article?"} %>
-</li></br>
+<% if logged_in? %>
+	<li>
+		<%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Delete this article?"} %>
+	</li></br>
 
-<li>
-	<%= link_to "Edit", edit_article_path(@article)%>
-</li></br>
+	<li>
+		<%= link_to "Edit", edit_article_path(@article)%>
+	</li></br>
+<% end %>

@@ -3,6 +3,5 @@ class HomeController < ApplicationController
 	end
 
 	def aboutme
-		render params[:page]
 	end
 end
