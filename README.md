@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+CSS file found at: http://tutorials.jumpstartlab.com/assets/blogger/screen.css
